@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
-import org.springframework.data.jpa.mapping.JpaPersistentProperty;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.orm.jpa.AbstractEntityManagerFactoryBean;
@@ -24,7 +23,7 @@ import java.util.Properties;
  * @author 李尚庭
  */
 @Configuration
-@PropertySource(value = "classpath:application.properties")
+@PropertySource(value = "classpath:dao.properties")
 @EnableJpaRepositories(basePackages = "com.lstfight.*",
         transactionManagerRef = "jpaTransactionManager",repositoryFactoryBeanClass = RepositoryFactoryBean.class)
 @EnableAspectJAutoProxy(proxyTargetClass = true)
